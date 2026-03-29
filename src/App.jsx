@@ -322,7 +322,7 @@ const App = () => {
         <h2 style={{ fontSize: '1.75rem', marginBottom: 40, display: 'flex', alignItems: 'center', gap: 12 }}>
           <ShieldAlert className="text-danger" /> {t.section5Title}
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+        <div className="risks-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
           {t.risks.map((risk, idx) => (
             <motion.div
               key={idx}

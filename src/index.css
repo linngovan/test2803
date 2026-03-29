@@ -274,3 +274,101 @@ header {
   background: var(--bg-primary);
   border: 3px solid var(--brand-color);
 }
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Typography */
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.35rem !important; margin-top: 24px !important; margin-bottom: 16px !important; }
+  h3 { font-size: 1.1rem !important; }
+
+  /* Layout */
+  section { padding: 48px 0 !important; min-height: auto !important; }
+  .container { padding: 0 16px !important; }
+
+  /* Header: stack logo + lang toggle vertically */
+  .header-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    height: auto !important;
+    padding: 10px 0;
+  }
+  .logo { font-size: 1rem; }
+  .logo .text-muted { display: none; }
+
+  /* Hero: push down to clear the stacked header */
+  .hero {
+    padding-top: 120px !important;
+  }
+  .hero h1 { font-size: 2.2rem !important; margin-bottom: 16px !important; }
+  .hero p { font-size: 0.95rem !important; }
+
+  /* Glass panels */
+  .glass-panel { padding: 14px !important; border-radius: 12px !important; }
+
+  /* Funnel chart */
+  .funnel-step {
+    padding: 10px 12px !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  .funnel-content {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 4px 0;
+    gap: 6px;
+  }
+  .funnel-content > div:first-child {
+    width: 100% !important;
+    flex-wrap: wrap;
+    gap: 6px !important;
+  }
+  .funnel-content > div:first-child > span {
+    width: auto !important;
+    font-size: 0.85rem !important;
+  }
+  .funnel-content > div:last-child {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .funnel-content > div:last-child > span {
+    width: auto !important;
+    font-size: 0.8rem !important;
+  }
+  .funnel-content > div:last-child > div {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    font-size: 0.8rem !important;
+  }
+  .funnel-metric { font-size: 0.95rem !important; }
+
+  /* Bento grid */
+  .bento-grid { gap: 16px !important; }
+  .bento-col-4, .bento-col-8, .bento-col-6, .bento-col-12 {
+    grid-column: span 12 !important;
+  }
+
+  /* Root cause expandable cards */
+  .icon-box { width: 36px !important; height: 36px !important; }
+
+  /* Badge */
+  .badge { font-size: 0.75rem !important; padding: 3px 10px !important; }
+  .badge-warning { font-size: 0.8rem !important; line-height: 1.5; }
+
+  /* Risks grid: force single column */
+  .risks-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Roadmap */
+  .roadmap { padding-left: 20px !important; }
+  .roadmap-dot { left: -29px !important; width: 14px !important; height: 14px !important; }
+  .roadmap-item h3 { font-size: 1.15rem !important; }
+
+  /* Sprint task cards */
+  .roadmap-item div[style*="padding: 20"] { padding: 14px !important; }
+}
