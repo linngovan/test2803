@@ -46,7 +46,7 @@ const ExpandableCard = ({ title, children, icon: Icon, colorClass, highlight }) 
 };
 
 const App = () => {
-  const [lang, setLang] = useState('vi');
+  const [lang, setLang] = useState('en');
   const t = translations[lang];
 
   return (
